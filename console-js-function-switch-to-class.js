@@ -10,8 +10,10 @@ class Hero {
         this.name = name;
         this.level = level;
     }
+
     // Adding a method to the constructor
     greet() {
+        this.extraProperty = "Ad Hoc";
         return `${this.name} says hello.`;
     }
 }
@@ -54,3 +56,5 @@ console.log(hero1.attack());
 const hero2 = new Healer('Kanin', 1, 'cure');
 console.log(hero2.greet());
 console.log(hero2.heal());
+
+console.log(`Parent Hero class has a new property called extraProperty = '${hero2.extraProperty}'`);
